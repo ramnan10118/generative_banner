@@ -1,29 +1,22 @@
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import PromptInput from '../components/PromptInput';
 import styles from '../styles/Home.module.css';
 
+// Import BannerWorkspace dynamically to avoid SSR issues with canvas
+const BannerWorkspace = dynamic(() => import('../components/BannerWorkspace'), {
+  ssr: false
+});
+
 export default function Home() {
+  const handleGenerate = (prompt) => {
+    console.log('Generating banners for prompt:', prompt);
+    // TODO: Implement banner generation logic
+  };
+
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <Image
-          src="/logo.svg"
-          alt="logo"
-          width={150}
-          height={150}
-          className={styles.logo}
-        />
-        <p>
-          Edit <code>pages/index.js</code> and save to reload.
-        </p>
-        <a
-          className={styles.link}
-          href="https://openai.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BannerWorkspace />
+      <PromptInput onGenerate={handleGenerate} />
     </div>
   );
 } 

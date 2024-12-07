@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"pages/index.js -> ../components/BannerWorkspace\":{\"id\":\"pages/index.js -> ../components/BannerWorkspace\",\"files\":[\"static/chunks/components_BannerWorkspace_js.js\"]}}"
