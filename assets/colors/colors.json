@@ -1,0 +1,31 @@
+{
+  "brand": {
+    "background": {
+      "purple": {
+        "hex": "#7A3AE8",
+        "gradient": {
+          "start": "#8745ED",
+          "end": "#6A2FD5"
+        }
+      }
+    },
+    "text": {
+      "heading": {
+        "yellow": {
+          "hex": "#FFD700",
+          "usage": "main headings"
+        },
+        "white": {
+          "hex": "#FFFFFF",
+          "usage": "highlighted text on green"
+        }
+      },
+      "offer": {
+        "white": {
+          "hex": "#FFFFFF",
+          "usage": "offer text"
+        }
+      }
+    }
+  }
+}
