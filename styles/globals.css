@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'AckoPrimary';
-  src: url('/public/assets/fonts/acko_primary.ttf') format('truetype');
+  src: url('/assets/fonts/acko_primary.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'AckoSecondary';
-  src: url('/public/assets/fonts/acko_secondary.ttf') format('truetype');
+  src: url('/assets/fonts/acko_secondary.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,10 +30,6 @@ body {
   box-sizing: border-box;
 }
 
-canvas {
-  touch-action: none;
-}
-
 .workspace-container {
   width: 100%;
   height: 100%;
@@ -42,16 +38,23 @@ canvas {
   align-items: center;
   background: #f5f5f5;
   padding: 20px;
+  overflow: hidden;
 }
 
 .canvas-container {
-  width: 1080px;
-  height: 1920px;
+  width: 100%;
+  height: 100%;
   position: relative;
-  background: linear-gradient(135deg, #8745ED 0%, #6A2FD5 100%);
-  transform-origin: center;
-  transform: scale(0.4);
-  margin: auto;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.canvas-container:active {
+  cursor: grabbing;
+}
+
+canvas {
+  touch-action: none;
 }
 
 .heading-text {

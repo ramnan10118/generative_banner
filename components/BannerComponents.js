@@ -1,66 +1,46 @@
-import { Image, Text, Group } from 'react-konva';
+import { Image, Text, Group, Rect } from 'react-konva';
 import useImage from 'use-image';
 
 export const Logo = () => {
-  const [logo] = useImage('/public/assets/components/logo.svg');
+  const [logo] = useImage('/assets/components/logo.svg');
   return (
     <Image
       image={logo}
-      x={920}
-      y={40}
-      width={120}
-      height={40}
+      x={817}
+      y={33}
+      width={227}
+      height={75}
     />
   );
 };
 
 export const Heading = () => {
-  const topBoundary = 1920 * 0.2;
   return (
-    <Group y={topBoundary}>
+    <Group x={88} y={217}>
       <Text
-        text="Ride"
-        x={40}
-        y={0}
+        text="Ride secure,"
         fontSize={120}
         fontFamily="AckoPrimary"
         fill="#FFD700"
+        width={972}
         listening={false}
       />
       <Text
-        text="secure,"
-        x={320}
-        y={0}
-        fontSize={120}
-        fontFamily="AckoPrimary"
-        fill="#FFFFFF"
-        listening={false}
-      />
-      <Text
-        text="and"
-        x={40}
+        text="and save"
         y={140}
         fontSize={120}
         fontFamily="AckoPrimary"
         fill="#FFD700"
-        listening={false}
-      />
-      <Text
-        text="save"
-        x={320}
-        y={140}
-        fontSize={120}
-        fontFamily="AckoPrimary"
-        fill="#FFFFFF"
+        width={972}
         listening={false}
       />
       <Text
         text="more!"
-        x={40}
         y={280}
         fontSize={120}
         fontFamily="AckoPrimary"
         fill="#FFD700"
+        width={972}
         listening={false}
       />
     </Group>
@@ -68,69 +48,43 @@ export const Heading = () => {
 };
 
 export const OfferText = () => {
-  const y = 1920 * 0.4;
   return (
-    <Group>
-      <Text
-        text="Get up to 85% off on bike"
-        x={40}
-        y={y}
-        width={756}
-        fontSize={64}
-        fontFamily="AckoPrimary"
-        fill="#FFFFFF"
-        listening={false}
-      />
-      <Text
-        text="insurance on ACKO!"
-        x={40}
-        y={y + 80}
-        width={756}
-        fontSize={64}
-        fontFamily="AckoPrimary"
-        fill="#FFFFFF"
-        listening={false}
-      />
-    </Group>
+    <Text
+      text="Get up to 85% off on bike insurance on ACKO!"
+      x={88}
+      y={727}
+      width={819}
+      height={123}
+      fontSize={64}
+      fontFamily="AckoSecondary"
+      fill="#FFFFFF"
+      listening={false}
+    />
   );
 };
 
 export const ProductImage = () => {
-  const [image] = useImage('/public/assets/images/bike_image.png');
-  const width = 1080 * 0.6;
+  const [image] = useImage('/assets/images/bike_image.png');
   return (
     <Image
       image={image}
-      x={1080 - width - 40}
-      y={1920 * 0.5}
-      width={width}
-      height={width}
+      x={240}
+      y={1012}
+      width={1382}
+      height={776}
       listening={false}
     />
   );
 };
 
 export const CTAButton = () => {
-  const [ctaImage] = useImage('/public/assets/components/cta-button.svg');
+  const [ctaImage] = useImage('/assets/components/cta-button.svg');
   return (
-    <Group>
+    <Group x={88} y={1012}>
       <Image
         image={ctaImage}
-        x={40}
-        y={1920 * 0.6}
-        width={200}
-        height={60}
-      />
-      <Text
-        text="Check now >"
-        x={40}
-        y={1920 * 0.6 + 10}
-        width={200}
-        align="center"
-        fontSize={36}
-        fontFamily="AckoPrimary"
-        fill="#FFFFFF"
-        listening={false}
+        width={486}
+        height={137.34}
       />
     </Group>
   );
@@ -138,16 +92,25 @@ export const CTAButton = () => {
 
 export const Disclaimer = () => {
   return (
-    <Text
-      text="Acko General Insurance Limited| IRDAI Reg no. 157 | UID: 5394 | Two Wheeler Package Policy IRDAN157RP0002V01201819 for more details visit www.acko.com|*T&Cs Apply"
-      x={40}
-      y={1840}
-      width={1000}
-      align="center"
-      fontSize={16}
-      fontFamily="AckoSecondary"
-      fill="#FFFFFF"
-      listening={false}
-    />
+    <Group y={1805}>
+      <Rect
+        x={48}
+        width={985}
+        height={2}
+        fill="rgba(255, 255, 255, 0.3)"
+      />
+      <Text
+        text="Acko General Insurance Limited| IRDAI Reg no. 157 | UID: 5394 | Two Wheeler Package Policy IRDAN157RP0002V01201819 for more details visit www.acko.com|*T&Cs Apply"
+        x={-17}
+        y={23}
+        width={1115}
+        height={92}
+        fontSize={16}
+        fontFamily="AckoPrimary"
+        fill="#FFFFFF"
+        align="center"
+        listening={false}
+      />
+    </Group>
   );
 }; 
