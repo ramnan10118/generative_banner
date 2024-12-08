@@ -97,17 +97,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "@use-gesture/react":
-/*!*************************************!*\
-  !*** external "@use-gesture/react" ***!
-  \*************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@use-gesture/react");
-
-/***/ }),
-
 /***/ "next/dist/compiled/next-server/pages.runtime.dev.js":
 /*!**********************************************************************!*\
   !*** external "next/dist/compiled/next-server/pages.runtime.dev.js" ***!
@@ -160,6 +149,17 @@ module.exports = require("react/jsx-dev-runtime");
 
 "use strict";
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "use-image":
+/*!****************************!*\
+  !*** external "use-image" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("use-image");
 
 /***/ }),
 

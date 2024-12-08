@@ -1,0 +1,110 @@
+{
+  "canvas": {
+    "dimensions": {
+      "vertical": {
+        "width": 1080,
+        "height": 1920,
+        "aspectRatio": "9:16"
+      }
+    }
+  },
+  "components": {
+    "logo": {
+      "type": "svg",
+      "position": {
+        "fixed": true,
+        "top": 40,
+        "right": 40,
+        "width": 120,
+        "zIndex": 10
+      }
+    },
+    "heading": {
+      "type": "text",
+      "position": {
+        "fixed": false,
+        "constraints": {
+          "topBoundary": "20%",
+          "bottomBoundary": "40%",
+          "leftPadding": 40,
+          "rightPadding": 40
+        },
+        "width": "80%",
+        "zIndex": 5
+      },
+      "variations": [
+        {"alignment": "left"},
+        {"alignment": "center"}
+      ]
+    },
+    "offerText": {
+      "type": "text",
+      "position": {
+        "fixed": false,
+        "constraints": {
+          "minDistanceFromHeading": 40,
+          "maxDistanceFromHeading": 100,
+          "leftPadding": 40,
+          "rightPadding": 40
+        },
+        "width": "70%",
+        "zIndex": 4
+      }
+    },
+    "productImage": {
+      "type": "image",
+      "position": {
+        "fixed": false,
+        "constraints": {
+          "bottomBoundary": "90%",
+          "width": "60%"
+        },
+        "variations": [
+          {"alignment": "right"},
+          {"alignment": "bottomRight"}
+        ],
+        "zIndex": 3
+      }
+    },
+    "ctaButton": {
+      "type": "svg",
+      "position": {
+        "fixed": false,
+        "constraints": {
+          "minDistanceFromOffer": 30,
+          "maxDistanceFromOffer": 60,
+          "leftPadding": 40
+        },
+        "width": 200,
+        "zIndex": 6
+      }
+    },
+    "disclaimer": {
+      "type": "svg",
+      "position": {
+        "fixed": true,
+        "bottom": 20,
+        "width": "100%",
+        "zIndex": 2
+      }
+    }
+  },
+  "layoutVariations": [
+    {
+      "id": "layout1",
+      "description": "Default layout - Image right",
+      "componentOrder": ["logo", "heading", "offerText", "ctaButton", "productImage", "disclaimer"]
+    },
+    {
+      "id": "layout2",
+      "description": "Centered text - Image bottom right",
+      "heading": {"alignment": "center"},
+      "offerText": {"alignment": "center"},
+      "productImage": {"alignment": "bottomRight"}
+    }
+  ],
+  "spacing": {
+    "minComponentGap": 20,
+    "preferredComponentGap": 40
+  }
+}

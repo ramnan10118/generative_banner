@@ -1,9 +1,28 @@
+@font-face {
+  font-family: 'AckoPrimary';
+  src: url('/public/assets/fonts/acko_primary.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AckoSecondary';
+  src: url('/public/assets/fonts/acko_secondary.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --acko-gradient: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
+  --acko-green: #48BB78;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -13,4 +32,34 @@ body {
 
 canvas {
   touch-action: none;
+}
+
+.workspace-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.canvas-container {
+  width: 1080px;
+  height: 1920px;
+  position: relative;
+  background: linear-gradient(135deg, #8745ED 0%, #6A2FD5 100%);
+  transform-origin: center;
+  transform: scale(0.4);
+  margin: auto;
+}
+
+.heading-text {
+  font-family: 'AckoPrimary', sans-serif;
+  color: var(--acko-gradient);
+}
+
+.offer-text {
+  font-family: 'AckoSecondary', sans-serif;
+  color: var(--acko-green);
 } 
